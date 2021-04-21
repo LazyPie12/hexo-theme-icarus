@@ -27,7 +27,8 @@ class Navbar extends Component {
             showSearch,
             searchTitle
         } = this.props;
-
+        
+        // 该if语句不生效，返回值修改为默认图片加文字
         let navbarLogo = '';
         if (logo) {
             if (logo.text) {
@@ -43,7 +44,9 @@ class Navbar extends Component {
             <div class="container">
                 <div class="navbar-brand justify-content-center">
                     <a class="navbar-item navbar-logo" href={siteUrl}>
-                        {navbarLogo}
+                        {/* 将logo改为图片加文字 */}
+                        <img src={logoUrl} alt={siteTitle} height="28" />
+                        <span style="font-weight:600; margin-left:8px">LazyPie's Blog</span>
                     </a>
                 </div>
                 <div class="navbar-menu">
